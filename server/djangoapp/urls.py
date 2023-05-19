@@ -4,7 +4,11 @@ from django.conf import settings
 from . import views
 
 app_name = 'djangoapp'
+
 urlpatterns = [
+    path('',views.get_dealerships, name='index'),
+    path('about/', views.about, name='about'),
+    path('contact/', views.contact, name='contact')
     # route is a string contains a URL pattern
     # view refers to the view function
     # name the URL
@@ -19,7 +23,6 @@ urlpatterns = [
 
     # path for logout
 
-    path(route='', view=views.get_dealerships, name='index'),
 
     # path for dealer reviews view
 
