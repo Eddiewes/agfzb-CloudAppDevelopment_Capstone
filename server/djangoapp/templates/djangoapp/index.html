@@ -11,15 +11,73 @@
     <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/bootstrap-table.min.js"></script>
     <script src="https://unpkg.com/bootstrap-table@1.18.2/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
+    <style>
+        .custom-container{
+            display:flex;
+            flex-direction:column;
+            margin-left:50px;
+        }
+
+        .row{
+            display:flex; 
+            flex-direction:row;
+            gap: 1em;
+            padding:5px;
+            align-items:center;
+        }
+
+        .label{
+            width:70px;
+        }
+    </style>
 </head>
 
     <body>
-    <!-- Remove this line the first time you edit this file -->
-     This is the index page of your Django app!
     <!--Add a nav bar here -->
     <nav>
-       <a href="https://williamseddi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/about"><button  class="btn btn-primary">About Us</button></a>
-       <a href="https://williamseddi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/contact"> <button  class="btn btn-primary">Contact Us</button> </a>
+
+        <div class="custom-container">
+            <div class="row"><a href="https://williamseddi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/about"><button  class="btn btn-primary btn-sm">About Us</button></a>
+                <a href="https://williamseddi-8000.theiadocker-2-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/contact"> <button  class="btn btn-primary btn-sm">Contact Us</button> </a></div>
+               
+        </div>
+    {% if user.is_authenticated %}
+        <form action="">
+            <div class="custom-container">
+
+                
+
+                <div class="row">
+                    <div class="label"><label for="">Username</label></div>
+                    <div class="element"><input type="text"></div>
+                </div>
+
+
+                <div class="row">
+                        <div class="label"><label for="">Password</label></div>
+                        <div class="element"><input type="password"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label"><a href="https://williamseddi-8000.theiadocker-3-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai/djangoapp/registration"><button type="submit" class="btn btn-primary text-nowrap">sign up</button></a></div>
+                        <div class="element"><a href=""><button type="submit" class="btn btn-primary">login</button></a></div>
+                    </div>
+                
+                    
+            </div>
+        </form>
+    {% else %}
+    <div class="custom-container">
+            <div class="row">
+                <div class="logout"><a href=""><button type="submit" class="btn btn-primary">logout</button></a></div>
+            </div>
+    </div>
+   
+
+    {% endif %}
+       
+       
+       
        
     </nav>
 

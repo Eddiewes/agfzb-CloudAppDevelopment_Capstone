@@ -28,7 +28,17 @@ def contact(request):
     context = {}
     return render(request, "djangoapp/contact.html", context)
 
+def signup(request):
+    context = {}
+    return  render(request, "djangoapp/registration.html", context)
 
+def login(request):
+    context = {}
+    return  render(request, "djangoapp/login.html", context)
+
+def logout(request):
+    context = {}
+    return  render(request, "djangoapp/logout.html", context)
 # Create an `about` view to render a static about page
 # def about(request):
 # ...

@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     {% load static %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+    .custom-container{
+        display:flex;
+        flex-direction:column;
+        margin-left:50px;
+    }
+
+    .row{
+        display:flex; 
+        flex-direction:row;
+        gap: 1em;
+        padding:5px;
+        align-items:center;
+    }
+
+    .label{
+        width:70px;
+    }
+</style>
 </head>
     <body>
-    <!--Add a registration form here -->
+        
+            
+
+
+                  <form action="">
+            <div class="custom-container">
+
+                <div class="row"><h1>Sign Up</h1></div>
+
+                <div class="row">
+                    <div class="label"><label for="">Username</label></div>
+                    <div class="element"><input type="text"></div>
+                </div>
+
+
+                <div class="row">
+                        <div class="label"><label for="">First Name</label></div>
+                        <div class="element"><input type="text"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label"><label for="">Last Name</label></div>
+                        <div class="element"><input type="text"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="label"><label for="">Password</label></div>
+                        <div class="element"><input type="password"></div>
+                    </div>
+
+                    
+
+                    <div class="row">
+                        <div class="label"><a href=""><button type="submit" class="btn btn-primary text-nowrap">sign up</button></a></div>
+                    </div>
+                
+                    
+            </div>
+                
+                    
+            </div>
+        </form>
     </body>
 </html>
